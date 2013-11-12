@@ -3,28 +3,28 @@
 
 #include "stdafx.h"
 #include "iostream"
-#include "fstream"
-#include "string"
+#include "stdio.h"
+#include "conio.h"
 using namespace std;
 int main()
 {
-	string data;
-	setlocale(LC_ALL, "Ukrainian");
+int f;
+double s;
+		setlocale(LC_ALL, "Ukrainian");
 	cout<<"                 ***********************************"<<endl
 		<<"                 **                               **"<<endl
-		<<"                 **  Програма яка зчитує файл i   **"<<endl
-		<<"                 ** виводить його в посимвольних  **"<<endl
-		<<"                 **    шiстнадцяткових кодах      **"<<endl
+		<<"                 **  Програма яка перетворює      **"<<endl
+		<<"                 ** введене число в 16-ковий код. **"<<endl
+		<<"                 **                               **"<<endl
 		<<"                 **                               **"<<endl
 		<<"                 **         (c) Vitaliy           **"<<endl
-		<<"                 ***********************************"<<endl<<endl;
-	ifstream infile("data.txt");
-	if (!infile)
-		cerr<<"Файл не вiдкрився";
-	else
-		infile<<data<<endl;
-		
+		<<"                 ***********************************"<<endl<<endl
+		<<"Введiть цiле число: ";
 
+cin>>f;
+printf("Ваше число в 16-ковому форматi = %x",f); 
+
+cout<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl;
 	system("pause");
 	return 0;
 }
