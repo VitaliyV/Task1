@@ -3,28 +3,35 @@
 
 #include "stdafx.h"
 #include "iostream"
-#include "stdio.h"
-
+#include "fstream"
 using namespace std;
+
 int main()
 {
-int f;
-double s;
+	
+int data; 
+
+
 		setlocale(LC_ALL, "Ukrainian");
-	cout<<"                 ***********************************"<<endl
-		<<"                 **                               **"<<endl
-		<<"                 **  Програма яка перетворює      **"<<endl
-		<<"                 ** введене число в 16-ковий код. **"<<endl
-		<<"                 **                               **"<<endl
-		<<"                 **                               **"<<endl
-		<<"                 **         (c) Vitaliy           **"<<endl
-		<<"                 ***********************************"<<endl<<endl
-		<<"Введiть цiле число: ";
+     cout<<"                 ***********************************"<<endl 
+		 <<"                 **                               **"<<endl
+		 <<"                 **    Ця програма зчитує файл    **"<<endl
+		 <<"                 ** text.txt i виводить його данi **"<<endl
+		 <<"                 **   16-ковiй системi числення.  **"<<endl
+		 <<"                 **     Програма працює лише з    **"<<endl
+		 <<"                 **        цiлими числами         **"<<endl  
+		 <<"                 **         (c) Vitaliy           **"<<endl
+		 <<"                 ***********************************"<<endl<<endl
+		 <<endl<<"Данi з файлу в шiстнадцятковiй системi числення: ";
 
-cin>>f;
-printf("Ваше число в 16-ковому форматi = %x",f); 
 
-cout<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl<<endl;
+ifstream infile("text.txt");
+if (!infile)
+	cerr<<"Файл не вiдкрився!"<<endl;
+else
+	while (infile>>data)
+	cout<<hex<<data<<" ";
+	cout<<endl;
 	system("pause");
 	return 0;
 }
