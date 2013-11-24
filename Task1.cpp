@@ -1,4 +1,4 @@
-// Код написаний Васьківом Віталієм.
+// 
 //
 
 #include "stdafx.h"
@@ -8,8 +8,7 @@ using namespace std;
 
 int main()
 {
-	
-int data; 
+ char	data; 
 
 
 		setlocale(LC_ALL, "Ukrainian");
@@ -17,10 +16,10 @@ int data;
 		 <<"                 **                               **"<<endl
 		 <<"                 **    Ця програма зчитує файл    **"<<endl
 		 <<"                 ** text.txt i виводить його данi **"<<endl
-		 <<"                 **   16-ковiй системi числення.  **"<<endl
-		 <<"                 **     Програма працює лише з    **"<<endl
-		 <<"                 **        цiлими числами         **"<<endl  
-		 <<"                 **         (c) Vitaliy           **"<<endl
+		 <<"                 ** в 16-ковiй системi числення.  **"<<endl
+		 <<"                 **                               **"<<endl  
+		 <<"                 **                               **"<<endl
+		 <<"                 **           2013. Vitaliy       **"<<endl
 		 <<"                 ***********************************"<<endl<<endl
 		 <<endl<<"Данi з файлу в шiстнадцятковiй системi числення: ";
 
@@ -30,8 +29,8 @@ if (!infile)
 	cerr<<"Файл не вiдкрився!"<<endl;
 else
 	while (infile>>data)
-	cout<<hex<<data<<" ";
+	cout<<hex<<(int)data<<" ";
 	cout<<endl;
 	system("pause");
 	return 0;
-}
+} 
